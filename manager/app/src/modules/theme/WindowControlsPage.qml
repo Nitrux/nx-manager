@@ -57,21 +57,21 @@ Maui.SettingsPage
                                 color: Maui.Theme.backgroundColor
                             }
 
-                            contentItem: Loader
-                            {
-                                property bool isActiveWindow: true
-                                property bool maximized: false
-                                property var buttonsModel : Maui.App.controls.rightWindowControls
-                                asynchronous: true
-                                source: model.source
-                            }
+                            // contentItem: Loader
+                            // {
+                            //     property bool isActiveWindow: true
+                            //     property bool maximized: false
+                            //     // property var buttonsModel : Maui.App.controls.rightWindowControls
+                            //     asynchronous: true
+                            //     source: model.source
+                            // }
                         }
 
                         Button
                         {
                              Layout.alignment: Qt.AlignBottom
                             Layout.fillWidth: true
-                            checked: model.name === Maui.App.controls.styleName
+                            // checked: model.name === Maui.App.controls.styleName
                             text: model.name
                             onClicked: control.manager.windowControlsTheme = model.name
                         }
@@ -84,7 +84,7 @@ Maui.SettingsPage
                         anchors.top: parent.top
                         anchors.margins: Maui.Style.space.medium
 
-                        visible: model.name === Maui.App.controls.styleName
+                        // visible: model.name === Maui.App.controls.styleName
                         checked: visible
                     }
                 }
